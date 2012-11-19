@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>Введение в Java</title>
+	
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="../../deck/core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="../../deck/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../../deck/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../../deck/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../../deck/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../../deck/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="../../deck/extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../../deck/themes/style/web-2.0.css">
+	<!-- <link rel="stylesheet" href="../../deck/themes/style/swiss.css"> -->
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../../deck/themes/transition/horizontal-slide.css">
+	
+	<!-- Required Modernizr file -->
+	<script src="../../js/modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide">
+	<h1>Введение в Java</h1>
+</section>
+
+<section class="slide">
+	<h2>История джавы</h2>
+	<blockquote cite="http://example.org">
+	  <p>Write Once, Run Anywhere</p>
+	  <p><cite>Sun</cite></p>
+	</blockquote>
+
+	<p>Разработка джавы началась с языка названого Oak. Проект был запущен SUN в 1991 и назывался "Green Project". Позднее язык был переименован в Java в честь кофе (т.к. по словам разработчиков, они поглащали его в больших колличествах).</p>
+	
+	<p>Проект задумывался как простая альтернатива языкам c/c++. Предпологалось использовать его для PDA и интерактивного телевидиния. Но после серии неудач было приянто решение сместить фокус в сторону сетевых приложений. Появился новый браузер WebRunner, позднее переименнованый в HotJava.</p>
+	
+	<p>В первые Sun запустила джаву в 1995, под лозунгом "Write Once, Run Anywhere". Со временем большинство браузеров ввело поддрежку джава апплетов и язык стал очень популярным.</p>
+
+	<p>Java Community Process (JCP)</p>
+
+	<p>8 мая 2007 Sun полностью завершила перевод всего джава кода под GPL лицензию.</p>
+</section>
+
+<section class="slide">
+	<h2>James Gosling. Создатель языка Java</h2>
+	<img src="596px-James_Gosling_2008.jpg" />
+</section>
+
+<section class="slide">
+	<h2>Версии джавы</h2>
+
+	<ul>
+		<li>Java 1.0. Кодовое имя — Oak. Разработка Java началась в 1990 году, первая официальная версия — Java 1.0, — была выпущена только в 1996 году.</li>
+
+		<li>19 Февраля 1997. Выходит JDK 1.1. Добавлена поддержка JavaBeans, JDBC, внутренние классы. Переработка системы сообщений AWT.</li>
+
+		<li>J2SE 1.2 (8 Декабря 1998) Кодовое имя — Codename Playground. С появлением версии 2, SUN Microsystems стала выпускать Java в виде пакета J2SE (Java 2 Platform Standard Edition — Стандартная версия платформы Java 2) и теперь номера версий указываются применительно к этому продукту. Swing включен в спецификацию платформы Java 2. Полная поддержка Unicode, включая поддержку ввода на японском, китайском и корейском языках. Включение в JDK для Java 2 JIT-компилятора, улучшенная производительность. 
+Усовершенствования инструментальных средств JDK, включая поддержку профилирования Java-программ</li>
+
+		<li>J2SE 1.3 (8 мая 2000) — Кодовое имя Kestrel. Появилась HotSpot JVM.</li>
+
+		<li>J2SE 1.4 (6 февраля 2002) — Кодовое имя Merlin.</li>
+
+		<li>J2SE 5.0 (30 сентября 2004) — Кодовое имя Tiger. C этой версии изменена официальная индексация, вместо Java 1.5 правильнее называть Java 5.0. Внутренняя же индексация Sun осталась прежней — 1.x. Минорные изменения теперь включаются без изменения индексации, для этого используется слово «Update» или буква «u», например Java Development Kit 5.0 Update 22. Предполагается, что в обновления могут входить как исправления ошибок так и небольшие добавления в API, JVM.</li>
+
+		<li>Java SE 6 (11 декабря 2006) — Кодовое имя Mustang. JavaScrip Mozilla's Rhino. Добавлена поддержка японского императорского календаря. Повысилась скорость вычислений на 70%, скорость операций ввода/вывода возросла в два раза.</li>
+
+		<li>Текущая версия. Java SE 7 (28 июля 2011) — Кодовое имя Dolphin, в качестве эталонной реализации Java SE 7 использован не проприетарный пакет JDK, а его открытая реализация OpenJDK, а сам релиз новой версии платформы готовился при тесном сотрудничестве инженеров Oracle с участниками мировой экосистемы Java, комитетом JCP (Java Community Process) и сообществом OpenJDK.</li>
+
+		<li>Java 8. Серидина 2013?</li>
+	</ul>
+</section>
+
+<!--	   Платформы       -->
+<section class="slide">
+	<h2>Доступные платформы</h2>
+
+	<ol>
+		<li>Java Card</li>
+		<li>Micro Edition (ME)</li>
+		<li>Standard Edition (SE)</li>
+		<li>Enterprise Edition (EE)</li>
+		<li>JavaFX</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>Java Card</h2>
+</section>
+
+<section class="slide">
+	<h2>Micro Edition (ME)</h2>
+</section>
+
+<section class="slide">
+	<h2>Standard Edition (SE)</h2>
+</section>
+
+<section class="slide">
+	<h2>Enterprise Edition (EE)</h2>
+</section>
+
+<section class="slide">
+	<h2>JavaFX</h2>
+</section>
+
+<section class="slide">
+	<h2>Использование джавы</h2>
+
+	<img src="usage.png" />
+</section>
+
+<section class="slide">
+	<h2>Java Virtual Machine</h2>
+</section>
+
+<section class="slide">
+	<h2>Bytecode</h2>
+</section>
+
+<section class="slide">
+	<h2>Не джавой единой</h2>
+</section>
+
+<section class="slide">
+	<h1>Всем спасибо</h1>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<script src="../../js/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../deck/core/deck.core.js"></script>
+<script src="../../deck/extensions/hash/deck.hash.js"></script>
+<script src="../../deck/extensions/menu/deck.menu.js"></script>
+<script src="../../deck/extensions/goto/deck.goto.js"></script>
+<script src="../../deck/extensions/status/deck.status.js"></script>
+<script src="../../deck/extensions/navigation/deck.navigation.js"></script>
+<script src="../../deck/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
