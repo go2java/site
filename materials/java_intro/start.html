@@ -37,7 +37,7 @@
 </section>
 
 <section class="slide">
-	<h2>История джавы</h2>
+	<h2>Введение</h2>
 	<blockquote cite="http://example.org">
 	  <p>Write Once, Run Anywhere</p>
 	  <p><cite>Sun</cite></p>
@@ -45,13 +45,11 @@
 
 	<p>Разработка джавы началась с языка названого Oak. Проект был запущен SUN в 1991 и назывался "Green Project". Позднее язык был переименован в Java в честь кофе (т.к. по словам разработчиков, они поглащали его в больших колличествах).</p>
 	
-	<p>Проект задумывался как простая альтернатива языкам c/c++. Предпологалось использовать его для PDA и интерактивного телевидиния. Но после серии неудач было приянто решение сместить фокус в сторону сетевых приложений. Появился новый браузер WebRunner, позднее переименнованый в HotJava.</p>
+	<p>Проект задумывался как простая альтернатива языкам c/c++. Предпологалось использовать его для PDA и интерактивного телевидиния. Но после серии неудач было приянто решение сместить фокус в сторону сетевых приложений. Появился новый браузер WebRunner, позднее переименнованый в HotJava, который поддреживал джава апплеты.</p>
 	
 	<p>В первые Sun запустила джаву в 1995, под лозунгом "Write Once, Run Anywhere". Со временем большинство браузеров ввело поддрежку джава апплетов и язык стал очень популярным.</p>
 
-	<p>Java Community Process (JCP)</p>
-
-	<p>8 мая 2007 Sun полностью завершила перевод всего джава кода под GPL лицензию.</p>
+	<p>На сегодняшний день джава представляет собой высокоуровневый ООП язык и платформу.</p>
 </section>
 
 <section class="slide">
@@ -99,32 +97,70 @@
 
 <section class="slide">
 	<h2>Java Card</h2>
+	<img src="201206281251084148.gif" />
+	<p>Java Card API позволяет программам, написанным на языке Java, исполняться безопасным образом на интеллектуальных картах и других устройствах с ограниченными ресурсами (SIM, GSM, ATM). Приложения, написанные для платформы Java Card называются апплетами.</p>
+
+	<p>Виртуальная Java Card машина состоит из двух частей, одна из которых работает непосредственно на самой карте, а другая – на хост-машине вне карты. Вне Java Card исполняются такие процессы, как загрузка классов, проверка байт-кода, оптимизация и т.п.</p>
 </section>
 
 <section class="slide">
 	<h2>Micro Edition (ME)</h2>
+
+	<p>Эта платформа была создана для выполнения на широком круге мобильных и встренных систем. Например: мобильные телефоны, КПК, телевизионные приставки и принтеры.</p>
+
+	<p>Среди мобильных устройств сущетвует огроммная разница в их возможностях. Различные рамеры экрана, колличество оперативной памяти и тд. Для решения этой проблемы J2ME предоставляет концепцию конфигураций и профилей. Конфигурация представляет собой подмножество требований утсройства. Профиль это апи, который сидит поверх этой конфигурации и позволяет использовать специфичные возможности данного устройства.</p>
 </section>
 
 <section class="slide">
 	<h2>Standard Edition (SE)</h2>
+
+	<p>С помощью стандартной платформы можно создовать и развертывать Java-приложения для настольных компьютеров и серверов, а также разрабатывать встроенное программное обеспечение и программы для систем реального времени.</p>
+
+	<p>Редакция включает в себя библиотеки для создания web-сервисов и базовые компоненты JavaEE.</p>
+
+	<p>Технологии входящие в Java SE: Java Foundation Classes (Swing), JavaHelp, Java Native Interface (JNI), Java Platform Debugger Architecture (JPDA), Java 2D API, Java Web Start, Certification Path API, Java Database Connectivity (JDBC), Java Advanced Imaging (JAI), Java Authentication and Authorization Service (JAAS), Java Data Objects (JDO), Java Management Extensions (JMX), Java Media Framework (JMF), Java Naming and Directory Interface (JNDI), Java Secure Socket Extensions (JSSE), Java Speech API (JSAPI), Java 3D, Metadata Facility, Java Content Repository API, Enumerations, Generics, Concurrency, Java API for XML Processing (JAXP), SOAP with Attachments API for Java (SAAJ).
 </section>
 
 <section class="slide">
 	<h2>Enterprise Edition (EE)</h2>
+
+	<p>Эта корпоративная версия платформы помогает разработчикам создавать и развертывать переносимые, надежные, масштабируемые и безопасные серверные приложения на Java.</p>
+
+	<p>Технологии, входящие в состав J2EE: Enterprise JavaBeans (EJB), Спецификация портлетов, JavaMail, Java Message Service (JMS), JavaServer Faces (JSF), JavaServer Pages (JSP), Стандартная библиотека тегов для JavaServer Pages (JSTL), Сервлеты Java, J2EE Connector Architecture (JCA), Спецификация J2EE Management (JMX), Java Transaction API (JTA)</p>
 </section>
 
 <section class="slide">
-	<h2>JavaFX</h2>
+	<h2>JavaFX 2.0</h2>
+	<img src="JavaFX.png" />
+	<p>JavaFX — это очередной язык со строгой типизацией программирования + runtime к нему. Как и обычная Java, JavaFX компилируется в байт код в виде .class файлов.</p>
+
+	<p>Т.к. JavaFX и Java выполняются на одной и той же виртуальной машине, ничего не мешает разработчикам использовать Java код в проектах под JavaFX. С выходом Java 8 Oracle планирует включить JavaFX в стандартные JRE/JDK</p>
+
+	<p>Основное применение - создание клиентских приложений, которые могут выполнятся либо в браузоре (внутри Java-апплета), либо на прямую на клиентской машине. Так же предпологается выполениние на мобильных телефонах (с поддержкой JavaME) и телевизорах с Java.</p>
+
+	<p>В JavaFX большое внимание уделено пользовательскому интерфейсу и созданию Rich Internet Applications (RIA). Во многом JavaFX схож с Flash и Silverlight.</p>
 </section>
 
 <section class="slide">
 	<h2>Использование джавы</h2>
 
 	<img src="usage.png" />
+
+	<ul>
+		<li>Java используется на 1.1 млрд. настольных ПК</li>
+		<li>Ежегодно регистрируется 930 миллионов загрузок среды выполнения Java</li>
+		<li>Java используется в 3 млрд. мобильных телефонов</li>
+		<li>Ежегодно поставляется в 31 раз больше телефонов Java, чем телефонов Apple и Android вместе взятых</li>
+		<li>Java используется в 100% всех проигрывателей Blu-ray</li>
+		<li>Ежегодно выпускается 1.4 млрд. платформ Java Card</li>
+		<li>На основе технологий Java работают приставки, принтеры, веб-камеры, игры, навигационные системы для автомобилей, терминалы для проведения лотерей, медицинские устройства, автоматы для оплаты парковки и многое другое.</li>
+	</ul>
 </section>
 
 <section class="slide">
-	<h2>Java Virtual Machine</h2>
+	<h2>Java Virtual Machine (HotSpot)</h2>
+	<p>Виртуальная машина джавы это сердце технологии. Ее главная задача транслировать скомпилированый байт-код в код аппаратного обеспечения.</p>
+	<p>На сегодняшний день считается, что выполнение Java кода в 1.5 раза медленней чем C.</p>
 </section>
 
 <section class="slide">
@@ -132,11 +168,98 @@
 </section>
 
 <section class="slide">
-	<h2>Не джавой единой</h2>
+	<h2>Специальные классы</h2>
+	<h3>Applet</h3>
+	<p>Джава апплеты это программы, которые выполняются встаиваются в веб страничку и выполняются в веб браузоре.</p>
+	<pre>// Hello.java
+import javax.swing.JApplet;
+import java.awt.Graphics;
+ 
+public class Hello extends JApplet {
+    public void paintComponent(final Graphics g) {
+        g.drawString("Hello, world!", 65, 95);
+    }
+}
+	</pre>
+
+	<pre>&lt;applet code="Hello.class" width="200" height="200"&gt;&lt;/applet&gt;</pre>
 </section>
 
 <section class="slide">
-	<h1>Всем спасибо</h1>
+	<h2>Специальные классы</h2>
+
+	<h3>Servlet</h3>
+	<p>Сервлеты позволяют расширять фунуциональность веб серверо. Сервлеты выполняются на стороне сервера, их главная задача генерировать ответ (responce) на запрос (http request) от клиента.</p>
+
+	<pre>// Hello.java
+import java.io.*;
+import javax.servlet.*;
+ 
+public class Hello extends GenericServlet {
+    public void service(final ServletRequest request, final ServletResponse response)
+    throws ServletException, IOException {
+        response.setContentType("text/html");
+        final PrintWriter pw = response.getWriter();
+        try {
+            pw.println("Hello, world!");
+        } finally {
+            pw.close();
+        }
+    }
+}</pre>
+</section>
+
+<section class="slide">
+	<h2>Недостатки</h2>
+
+	<ul>
+		<li>Отсутствие беззнаковых типов</li>
+		<li>Чтобы обеспечить обратную совместимость и возможность повторного использования существующих классов, обобщения были реализованы с помощью механизма стирания типов, что наложило серьёзные ограничения на их использование. В других языках обобщения дают больше возможностей, поскольку реализованы с помощью других механизмов. Поскольку обобщения были реализованы с помощью стирания типов, ледующие операции невозможны в Java:
+<pre>public class MyClass&lt;E&gt; {
+    public static void myMethod(Object item) {
+        if (item instanceof E) { // Ошибка компиляции
+            ...
+        }
+        E item2 = new E(); // Ошибка компиляции
+        E[] iArray = new E[10]; // Ошибка компиляции
+    }
+}</pre></li>
+		<li>Хотя операции над числами с плавающей точкой в Java в основном базируются на стандарте двоичной арифметики с плавающей точкой IEEE 754, некоторые функции не поддерживаются даже при использовании модификатора strictfp (англ.), такие как Флаги исключений и выпрямленные округления - возможности предусмотренные в качестве обязательных по стандарту IEEE 754. Кроме того, типы данных повышенной точности с плавающей точкой допускаются стандартом IEEE 754, реализованы во многих процессорах, не реализованы в Java.</li>	
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Не джавой единой</h2>
+	<div style="float:left; width: 50%">
+		<p>Языки которые были добавлены в JVM</p>
+		<ul>
+			<li>Erlang 	→ Erjang</li>
+			<li>JavaScript → Rhino</li>
+			<li>Pascal 	→ Free Pascal</li>
+			<li>PHP 	→ Quercus</li>
+			<li>Python 	→ Jython</li>
+			<li>REXX 	→ JRuby</li>
+			<li>Ruby 	→ Erjang</li>
+			<li>Tcl 	→ Jacl</li>
+		</ul>
+	</div>
+
+	<div style="float:left; width: 50%">
+	<p>Языки, которые создовались для JVM</p>
+	<ul>
+		<li>BBj</li>
+		<li>Clojure</li>
+		<li>Fantom</li>
+		<li>Groovy</li>
+		<li>Kotlin</li>
+		<li>MIDletPascal</li>
+		<li>Kawa</li>
+	</ul>
+	</div>
+</section>
+
+<section class="slide">
+	<h1>Вопросы?</h1>
 </section>
 
 <!-- End slides. -->
