@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Коллекции</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="article" title="Коллекции"><div class="titlepage"><div><div><h2 class="title"><a id="idp192"/>Коллекции</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Сергей</span> <span class="surname">Радюков</span></h3><div class="affiliation"><span class="orgname">Корус Консалтинг СНГ<br/></span></div></div></div><div><p class="pubdate">20.11.2012</p></div></div><hr/></div><div class="toc"><p><strong>Table of Contents</strong></p><dl><dt><span class="section"><a href="#idp5328">Основы</a></span></dt><dt><span class="section"><a href="#idp25488">Java Collections Framework (JCF)</a></span></dt><dt><span class="section"><a href="#idp34592">Интерфейсы (JCF core interfaces)</a></span></dt><dt><span class="section"><a href="#idp50592">APPENDIX A: Соглашения по использованию коллекций в Java</a></span></dt><dt><span class="section"><a href="#idp56224">APPENDIX B: Список используемоых веб ресуров</a></span></dt></dl></div><div class="section" title="Основы"><div class="titlepage"><div><div><h2 class="title"><a id="idp5328"/>Основы</h2></div></div></div><p>Коллекция - иногда называют контейнер - это просто объект, который
+    группирует несколько элементов в единое целое. Коллекции используются для
+    хранения, поиска, обработки и получения совокупности данных. Как правило,
+    они представляют элементы данных, которые образуют естественную группу,
+    такие как покер (сборник карт), почтовую папку (набор писем), или
+    телефонный справочник (отображение имен и телефонных номеров).</p><p>Примеры создания некоторых коллекций </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Массив Array</p><pre class="programlisting">Object[] exmapleArray = new Object[ARRAY_LENGTH];</pre></li><li class="listitem"><p>Объект список</p><pre class="programlisting">ArrayList&lt;Object&gt; exmpleList = new ArrayList();</pre><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+             в примере одна из реализаций списков из Java Collection Framework 
+          </div></li></ul></div></div><div class="section" title="Java Collections Framework (JCF)"><div class="titlepage"><div><div><h2 class="title"><a id="idp25488"/>Java Collections Framework (JCF)</h2></div></div></div><p><span class="bold"><strong>JCF</strong></span> - унифицированная архитектура
+    для представления и манипулирования коллекциями.</p><p><span class="bold"><strong>JCF содержит следующее:
+    </strong></span></p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Интерфейсы: Эти абстрактные типы данных, которые представляют
+          коллекции. Интерфейсы позволяют манипулировать коллекциями, 
+          независимо от деталей их представления. В объектно-ориентированных
+          языках, интерфейсы обычно образуют иерархию.</p></li><li class="listitem"><p>Реализации: Эти конкретные реализации коллекцию интерфейсов.
+          По сути, они являются многоразовыми структурами данных.</p></li><li class="listitem"><p>Алгоритмы: Это методы, которые выполняют операции,
+          такие как поиск и сортировка, для объектов, реализующих интерфейсы
+          коллекций. Алгоритмы называются полиморфными, то есть тот же самый
+          метод может быть использован для различных реализаций
+          соответствующего интерфейса коллекции. По сути, это алгоритмы
+          многократного использования функциональных возможностей.</p></li></ul></div><p><span class="bold"><strong> Использование дает следующие
+    приемущества </strong></span></p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Использование структур данных и алгоритмов JCF позволяет
+          сконцентрировать внимание на более важных частях приложения, избегая
+          низкоуровневнего программирования</p></li><li class="listitem"><p>Увелечение скорости работы и качества приложения</p></li><li class="listitem"><p>....TODO.......</p></li></ul></div></div><div class="section" title="Интерфейсы (JCF core interfaces)"><div class="titlepage"><div><div><h2 class="title"><a id="idp34592"/>Интерфейсы (JCF core interfaces)</h2></div></div></div><p>Интерфейсы JCF инкапсуляции различных типов коллекций, которые
+    показаны на рисунке ниже. Эти интерфейсы позволяют использовать коллекции,
+    чтобы манипулировать независимо от деталей их представления. Интерфейсы
+    основной коллекции являются основой Framework Java Collections. Как вы
+    можете видеть на рисунке ниже, интерфейсы основной коллекции образуют
+    иерархию.</p><div class="mediaobject"><img src="colls-coreInterfaces.gif"/></div><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+      Set представляет собой особый вид Collection, SortedSet это особый вид Set, и так далее. Отметим также, что иерархия состоит из двух различных деревьев - Map не является истинным Collection.
+    </div><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+       Все интерфейсы коллекции дженерик. Пример объявления интерфейса коллекции в JCF 
+
+      <pre class="programlisting">public interface Collection&lt;E&gt;...</pre></div><p>Более подробное описание интрефейсов коллекций </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Collection - наиболее общий интерфейс для всех коллекций.
+          Коллекция представляет собой группу объектов, известных как ее
+          элементы</p></li><li class="listitem"><p>Set - коллекция, которая не может содержать повторяющиеся
+          элементы. Этот интерфейс моделирует математическую абстракцию
+          множества и используется для представления наборов, таких как карты
+          содержащие покере, курсы составляют график студента, или процессами,
+          запущенными на компьютере</p></li><li class="listitem"><p>List - это упорядоченный набор (иногда называется
+          последовательность). Списки могут содержать повторяющиеся элементы.
+          Пользователь Списка, как правило, имеет точный контроль над тем, где
+          в списке каждый элемент вставляется и может получить доступ к
+          элементам по их целочисленному индексу (позиция)</p></li><li class="listitem"><p>Queue - коллекция используется для хранения нескольких
+          элементов перед обработкой. Помимо основных операций Collection,
+          очередь предоставляет дополнительные операции вставки, получения и
+          контрольных операций. Очереди обычно, но не обязательно, содержит
+          элементы в порядке FIFO (первым вошел, первым вышел). Среди
+          исключений PriorityQueue, которая содержит элементы порядке в
+          соответствии с предоставленным резальтатом работы интрефейса
+          Comparator или естественным порядоком элементов. Независимо от
+          упорядочения, очередь имеет элемент-вершину, который будет удален
+          вызовом для удаления или poll. В очереди FIFO, все новые элементы
+          вставляются в хвост очереди. Другие виды очереди могут использовать
+          разные правила размещения. Каждая реализация очереди должна
+          определяться со своим методом упорядочивания.</p></li><li class="listitem"><p>Map- объект, который привязвает ключи к значениям. Карта не
+          может содержать дубликаты ключей, к каждому ключу может быть
+          привязано не более одного значения.</p></li></ul></div><p> Последние два интерфейса представлют собой
+    отсортированные версии Set и Map </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>SortedSet - набор, который поддерживает его элементы в порядке
+          возрастания. Несколько дополнительных операций для управления
+          порядком. SortedSet используются для естественно упорядоченных
+          множеств, такие как списки слов.</p></li><li class="listitem"><p>SortedMap - Map, который поддерживает ее отображения в порядке
+          возрастания ключа. Это карта аналог SortedSet. SortedMap
+          используются для естественно упорядоченных наборов пар ключ /
+          значение, такие как словари и телефонных справочников.</p></li></ul></div></div><div class="section" title="APPENDIX A: Соглашения по использованию коллекций в Java"><div class="titlepage"><div><div><h2 class="title"><a id="idp50592"/>APPENDIX A: Соглашения по использованию коллекций в Java</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Преообразование массива в список</p><pre class="programlisting">Object[] objectArray = new Object[]{};
+List&lt;Object&gt; objectList = Arrays.asList(objectArray);</pre></li><li class="listitem"><p>Используйте интерфейсы коллекций для параметров методов,
+          вместо конкретных реализаций</p><pre class="programlisting">public List&lt;Object&gt; populateList(List&lt;Object&gt; parametr){
+        //Реалицазия не интересна
+}</pre></li><li class="listitem"><p>Используйте пустой список для возвращаемых параметров вместо
+          null</p><pre class="programlisting">public List&lt;Object&gt; getObjectList(){
+    List&lt;Object&gt; result;
+    //Query DB or somthing else
+    if (result == null){
+     result = Collections.emptyList();
+    }
+    return result;
+}</pre></li></ul></div></div><div class="section" title="APPENDIX B: Список используемоых веб ресуров"><div class="titlepage"><div><div><h2 class="title"><a id="idp56224"/>APPENDIX B: Список используемоых веб ресуров</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>http://docs.oracle.com/javase/tutorial/collections/index.html</p></li></ul></div></div></div></body></html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article version="5.0" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>Основы DocBook/XML</title>
+    <author>
+      <personname>
+        <firstname>Алексей</firstname><surname>Баранчиков</surname>
+      </personname>
+      <affiliation>
+        <orgname>Рязанская государственная радиотехническая академия</orgname>
+      </affiliation>
+    </author>
+    <pubdate>17 июля 2012 года</pubdate>
+  </info>
+  <section>
+    <title>Технология DocBook/XML</title>
+    <para>DocBook — приложение SGML или XML предназначенное для разметки документов, 
+    аналог HTML для разметки Web-документов.</para>
+    <para>http://www.ibm.com/developerworks/ru/library/l-SVN_DocBook_Mantis_5_2/index.html</para>
+  </section>
+  <section>
+    <title>Сфера применения</title>
+    <para>DocBook является стандартом де-факто для документации свободно
+    распространяемого программного обеспечения. Его используют 
+    ведущие ИТ-компании и организации: IBM, Microsoft и т.д. </para>
+    <para>Использование DocBook дает наибольший эффект в следующих
+    ситуациях:</para>
+    <itemizedlist>
+      <listitem>
+        <para>когда <emphasis>объем</emphasis> документации велик</para>
+      </listitem>
+      <listitem>
+        <para>когда в документацию постоянно приходится вносить <emphasis
+        role="bold">изменения</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>когда над документацией работает коллектив</para>
+      </listitem>
+      <listitem>
+        <para>когда документация включает в себя четко структурированные
+        составляющие</para>
+      </listitem>
+      <listitem>
+        <para>когда необходимо строго выдерживать оформление <emphasis
+        role="bold">множества</emphasis> документов</para>
+      </listitem>
+      <listitem>
+        <para>когда документацию требуется выпускать в <emphasis
+        role="bold">различных форматах</emphasis></para>
+      </listitem>
+      <listitem>
+        <para>когда требуется выпускать <emphasis>разные версии</emphasis>
+        документации с отличающимся содержимым</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+</article>
